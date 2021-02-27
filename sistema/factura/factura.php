@@ -61,7 +61,7 @@
 							<td><label>Telefono:</label> <p><?php echo $factura['telefono']; ?></p></td>
 						</tr>
 						<tr>
-							<td><label>Nomre:</label> <p><?php echo $factura['nombre']; ?></p></td>
+							<td><label>Nome:</label> <p><?php echo $factura['nombre']; ?></p></td>
 							<td><label>Endereço:</label> <p><?php echo $factura['direccion']; ?></p></td>
 						</tr>
 					</table>
@@ -74,10 +74,10 @@
 	<table id="factura_detalle">
 			<thead>
 				<tr>
-					<th width="50px">Cant.</th>
-					<th class="textleft">Descripción</th>
-					<th class="textright" width="150px">Precio Unitario.</th>
-					<th class="textright" width="150px"> Precio Total</th>
+					<th width="50px">Quantidade.</th>
+					<th class="textleft">Descrição</th>
+					<th class="textright" width="150px">Preço unitário.</th>
+					<th class="textright" width="150px"> Preço Total</th>
 				</tr>
 			</thead>
 			<tbody id="detalle_productos">
@@ -121,8 +121,8 @@
 		</tfoot>
 	</table>
 	<div>
-		<p class="nota">Si usted tiene preguntas sobre esta factura, <br>pongase en contacto con nombre, teléfono y Email</p>
-		<h4 class="label_gracias">¡Gracias por su compra!</h4>
+		<p class="nota">Se você tiver dúvidas sobre esta fatura, <br>entre em contato com nome, telefone e email</p>
+		<h4 class="label_gracias">Obrigado por sua compra!</h4>
 	</div>
 
 </div>

@@ -101,7 +101,7 @@
                 <td>
                     <a class="link_add add_product" product="<?php echo $data["codproducto"]; ?>" href="#"><i class="fas fa-plus"></i> Agregar</a>
                     |
-                    <a class="link_edit" href="editar_producto.php?id=<?php echo $data["codproducto"]; ?>"><i class="fas fa-edit"></i> Editar</a>
+                    <a class="link_edit" href="editar_produto.php?id=<?php echo $data["codproducto"]; ?>"><i class="fas fa-edit"></i> Editar</a>
                     |
                     <a class="link_delete del_product" product="<?php echo $data["codproducto"]; ?>" href="#"><i class="fas fa-trash-alt"></i> Eliminar</a>
                     

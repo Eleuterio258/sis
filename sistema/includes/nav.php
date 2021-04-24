@@ -40,6 +40,8 @@
 						<li><a href="registro_produto.php"><i class="fas fa-plus-circle"></i> Novo Produto</a></li>
 						<?php } ?>
 						<li><a href="lista_produto.php"><i class="fas fa-clipboard-list"></i> Lista de Produtos</a></li>
+						<li><a href="registro_categories.php"><i class="fas fa-clipboard-list"></i>Nova Categoria</a></li>
+						<li><a href="lista_categories.php"><i class="fas fa-clipboard-list"></i>Lista de Categoria</a></li>
 					</ul>
 				</li>
 			
@@ -48,6 +50,7 @@
 					<ul>
 						<li><a href="nova_venda.php"><i class="fas fa-plus-circle"></i> Novo Venda</a></li>
 						<li><a href="vendas.php"><i class="fas fa-clipboard-list"></i> Vendas</a></li>
+						<li><a href="vendascliente.php"><i class="fas fa-clipboard-list"></i> Vendas Clientes</a></li>
 					</ul>
 				</li>
 			</ul>

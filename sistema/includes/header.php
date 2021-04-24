@@ -9,7 +9,7 @@ if (empty($_SESSION['active']))
 <header>
 		<div class="header">
 			
-			<h1><img class="logo1" src="img/log1.png">SGVCR.COM</h1>
+			<h1><img class="logo1" src="img/log1.png">SIGCVRS.COM</h1>
 			<div class="optionsBar">
 				<p>Maputo, <?php echo date("d-M-Y - h:i a"); ?></p>
 				<span>|</span>

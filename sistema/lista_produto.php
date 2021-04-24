@@ -15,10 +15,10 @@
 	<section id="container">
 		<h1><i class="fas fa-boxes"></i> Lista de Productos</h1>
         <?php if($_SESSION['rol'] == 1 || $_SESSION['rol'] == 2){ ?>
-        <a href="registro_produto.php" class="btn_new"><i class="fas fa-plus-circle"></i> Registrar producto</a>
+        <a href="registro_producto.php" class="btn_new"><i class="fas fa-plus-circle"></i> Registrar producto</a>
         <?php } ?>
 
-        <form action="buscar_produto.php" method="get" class="form_search">
+        <form action="buscar_producto.php" method="get" class="form_search">
             <input type="text" name="busqueda" id="busqueda" placeholder="Buscar">
             <button type="submit" class="btn_view"><i class="fas fa-search"></i></button>
         </form>
@@ -26,16 +26,16 @@
         <table>
             <tr>
                 <th>Código</th>
-                <th>Descrição</th>
-                <th>Preço</th>
-                <th>Existência</th>
+                <th>Descripción</th>
+                <th>Precio</th>
+                <th>Existencia</th>
                 <th>
                 <?php
                 $query_proveedor = mysqli_query($conn, "SELECT codproveedor, proveedor FROM proveedor WHERE estatus= 1 ORDER BY proveedor ASC");
                 $result_proveedor = mysqli_num_rows($query_proveedor);      
                 ?>
                 <select name="proveedor" id="search_proveedor">
-                <option value="" selected>Fornecedor</option>
+                <option value="" selected>Proveedor</option>
                 <?php
                     if($result_proveedor > 0){
                         while($proveedor = mysqli_fetch_array($query_proveedor)){
@@ -49,7 +49,7 @@
                 </th>
                 <th>Foto</th>
                 <?php if($_SESSION['rol'] == 1 || $_SESSION['rol'] == 2){ ?>
-                <th>Ações</th>
+                <th>Acciones</th>
                 <?php } ?>
             </tr>
         <?php
@@ -70,7 +70,7 @@
         $desde = ($pagina-1) * $por_pagina;
         $total_paginas = ceil($total_registro / $por_pagina);
 
-            $query = mysqli_query($conn, "SELECT p.codproducto, p.descripcion, p.precio, p.existencia, 
+            $query = mysqli_query($conn, "SELECT p.codproducto, p.name, p.price, p.stock, 
                                                 pr.proveedor, p.foto FROM producto p 
                                                 INNER JOIN proveedor pr
                                                 ON p.proveedor = pr.codproveedor 
@@ -91,17 +91,17 @@
                        ?>
                 <tr class="row<?php echo $data["codproducto"]; ?>">
                 <td><?php echo $data["codproducto"]; ?></td>
-                <td><?php echo $data["descripcion"]; ?></td>
-                <td class="celPrecio"><?php echo $data["precio"]; ?></td>
-                <td class="celExistencia"><?php echo $data["existencia"]; ?></td>
+                <td><?php echo $data["name"]; ?></td>
+                <td class="celPrecio"><?php echo $data["price"]; ?></td>
+                <td class="celExistencia"><?php echo $data["stock"]; ?></td>
                 <td><?php echo $data["proveedor"]; ?></td>
-                <td class="img_producto"><img src="<?php echo $foto;?>" alt="<?php echo $data["descripcion"]; ?>"></td>
+                <td class="img_producto"><img src="<?php echo $foto;?>" alt="<?php echo $data["name"]; ?>"></td>
                 
                 <?php if($_SESSION['rol'] == 1 || $_SESSION['rol'] == 2){ ?>
                 <td>
                     <a class="link_add add_product" product="<?php echo $data["codproducto"]; ?>" href="#"><i class="fas fa-plus"></i> Agregar</a>
                     |
-                    <a class="link_edit" href="editar_produto.php?id=<?php echo $data["codproducto"]; ?>"><i class="fas fa-edit"></i> Editar</a>
+                    <a class="link_edit" href="editar_producto.php?id=<?php echo $data["codproducto"]; ?>"><i class="fas fa-edit"></i> Editar</a>
                     |
                     <a class="link_delete del_product" product="<?php echo $data["codproducto"]; ?>" href="#"><i class="fas fa-trash-alt"></i> Eliminar</a>
                     

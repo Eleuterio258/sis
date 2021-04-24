@@ -2,7 +2,7 @@ $(document).ready(function(){
 
     //----------------Foto Producto-----------------///
     $("#foto").on("change",function(){
-        var uploadFoto = document.getElementById("foto").value;
+        var uploadFoto = document.getElementById("poto").value;
         var foto = document.getElementById("foto").files;
         var nav = window.URL || window.webkitURL;
         var contactAlert = document.getElementById('form_alert');

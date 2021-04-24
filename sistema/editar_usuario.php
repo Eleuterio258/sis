@@ -112,13 +112,13 @@ if($_SESSION['rol'] !=1)
 
         <form action="" method="post">
             <input type="hidden" name="id" value="<?php echo $iduser; ?>">
-            <label for="nombre">Nombre</label>
+            <label for="nombre">Nome</label>
             <input type="text" name="nombre" id="nombre" placeholder="Nombre completo" value= "<?php echo $nombre; ?>">
-            <label for="correo">Correo Electronico</label>
+            <label for="correo">Email</label>
             <input type="email" name="correo" id="correo" placeholder="Correo electronico" value= "<?php echo $email; ?>">
             <label for="usuario">Usuario</label>
             <input type="text" name="usuario" id="usuario" placeholder="Usuario" value= "<?php echo $usuario; ?>">
-            <label for="clave">Clave</label>
+            <label for="clave">Senha</label>
             <input type="password" name="clave" id="clave" placeholder="Clave de acceso">
             <label for="rol">Tipo Usuario</label>
 

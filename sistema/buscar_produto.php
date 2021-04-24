@@ -86,7 +86,7 @@ include "../conn.php";
             </tr>
             <?php
             //Paginador
-            $sql_registe = mysqli_query($conn, "SELECT COUNT(*) as total_registro FROM producto as p
+            $sql_registe = mysqli_query($conn, "SELECT COUNT(*) as total_registro FROM products as p
                                                     WHERE $where ");
             $result_register = mysqli_fetch_array($sql_registe);
             $total_registro = $result_register['total_registro'];
@@ -104,7 +104,7 @@ include "../conn.php";
             $total_paginas = ceil($total_registro / $por_pagina);
 
             $query = mysqli_query($conn, "SELECT p.codproducto, p.descripcion, p.precio, p.existencia, 
-                                                pr.proveedor, p.foto FROM producto p 
+                                                pr.proveedor, p.foto FROM products p 
                                                 INNER JOIN proveedor pr
                                                 ON p.proveedor = pr.codproveedor 
                                                 WHERE $where
